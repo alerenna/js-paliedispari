@@ -6,8 +6,8 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
 */
 
 // Creare una variabile con una parola palindroma
-const palindroma = 'lool'
-console.log(palindroma);
+
+/* console.log(palindroma);
 
 
 // Creare il meccanismo per decretare se la parola è palindroma
@@ -31,35 +31,44 @@ if (palindroma === reversedWord) {
     console.log(`The word ${palindroma} is a palindrome`);
 } else {
     console.log(`The word ${palindroma} is not a palindrome`);
-}
+} */
 
 
 // Inserire il meccanismo in una funzione e modificare i parametri per adattarlo alla funzione
+const palindroma = prompt('Type a palindrome word')
 
 function reverseTheWord(word) {
     const reverseWord = []
+    
+    // Ciclo per trovare tutti i caratteri della parola
+    for (let i = word.length -1; i >=0; i--) {
+        const thisWord = word[i]
+        reverseWord.push(thisWord)
+    }
+    //Ritrasformo in una stringa
+    reverseWord.toString()
+    // Tolgo le virgole
+    const reversedWord = (reverseWord.join(''));
 
-// Ciclo per trovare tutti i caratteri della parola
-for (let i = word.length -1; i >=0; i--) {
-    const thisWord = word[i]
-    reverseWord.push(thisWord)
+    // Creo la condizione per definire se la parola e il suo reverse sono uguali, nel qual caso è palindroma, altrimenti no
+    if (word === reversedWord) {
+        return true
+    } else {
+        return false
+    }
+
 }
-//Ritrasformo in una stringa
-reverseWord.toString()
-// Tolgo le virgole
-const reversedWord = (reverseWord.join(''));
 
-// Creo la condizione per definire se la parola e il suo reverse sono uguali, nel qual caso è palindroma, altrimenti no
-if (word === reversedWord) {
-    return true
+let wordIsPalindrome = reverseTheWord(palindroma)
+//console.log(wordIsPalindrome);
+
+if (wordIsPalindrome === true) {
+    console.log(`The word ${palindroma} is palindrome`);
 } else {
-    return false
+    console.log(`The word ${palindroma} is NOT palindrome`);
+    
 }
 
-}
-
-const wordIsPalindrome = reverseTheWord('ciao')
-console.log(reverseTheWord());
 
 
 // Chiedere all'utente la parola palindroma e sostituirlo con la variabile della parola palindroma
