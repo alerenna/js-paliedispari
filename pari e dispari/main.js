@@ -11,7 +11,7 @@ const userNumber = Number(prompt('Scegli un numero da uno a 5'))
 //Generiamo un numero da 1 a 5 per il computer (funzione)
 
 function numberGenerator1To5 () {
-    pcRandom = Math.ceil(Math.random() * 5)
+    let pcRandom = Math.ceil(Math.random() * 5)
     
     return pcRandom
 }
