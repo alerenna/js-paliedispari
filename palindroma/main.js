@@ -6,7 +6,9 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
 */
 
 // Creare una variabile con una parola palindroma
-const palindroma = 'lool'
+const palindroma = 'callac'
+console.log(palindroma);
+
 
 // Creare il meccanismo per decretare se la parola è palindroma
 
@@ -16,16 +18,16 @@ const reverseWord = []
 
 // Ciclo per trovare tutti i caratteri della parola
 for (let i = palindroma.length -1; i >=0; i--) {
-    const thisPalindroma = palindroma [i]
+    const thisPalindroma = palindroma[i]
     reverseWord.push(thisPalindroma)
 }
 //Ritrasformo in una strina
 reverseWord.toString()
 // Tolgo le virgole
-console.log(reverseWord.join(""));
+const reversedWord = (reverseWord.join(''));
 
 // Creo la condizione per definire se la parola e il suo reverse sono uguali, nel qual caso è palindroma, altrimenti no
-if (palindroma === reverseWord) {
+if (palindroma === reversedWord) {
     console.log(`The word ${palindroma} is a palindrome`);
 } else {
     console.log(`The word ${palindroma} is not a palindrome`);
