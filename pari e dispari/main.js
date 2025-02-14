@@ -5,9 +5,8 @@ L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un n
 */
 
 // Utente deve scegliere un numero da 1 a 5
-/* const userNumber = Number(prompt('Scegli un numero da uno a 5')) */
+const userNumber = Number(prompt('Scegli un numero da uno a 5')) 
 
-const userNumber = 4
 
 //Generiamo un numero da 1 a 5 per il computer (funzione)
 
